@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/styles.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+		<title>Super Duper Interest Calculator</title>
+	</head>
+	<body>
+		<div class="main-container">
+			<h1>Super Duper Interest Calculator💰💸</h1>
+            <p>Let's see how much your savings account will have after some time with compound interest! 🤑</p>
+            <hr>
+
+            <div class="bg"></div>
+            <div class="bg bg2"></div>
+            <div class="bg bg3"></div>
+            
+			<main>
+				<section class="fields">
+					<div class="input-group">
+						<label for="initial-amount">Initial amount</label>
+						<p id="initial-amount-display">
+							<span class="dollar-sign">💲 </span> <span class="amount"></span>
+						</p>
+						<input
+							type="range"
+							id="initial-amount"
+							class="slider"
+							value="5000"
+							step="100"
+							min="100"
+							max="50000"
+						/>
+						<div class="range-labels"><span>$100</span><span>$50,000</span></div>
+					</div>
+
+					<div class="input-group">
+						<label for="interest-rate">Interest rate (APY): %</label>
+						<input type="number" id="interest-rate" value="3.94" step="0.01" min="0" />
+					</div>
+
+					<div class="row">
+						<div class="input-group">
+							<label for="years">For how long (years)</label>
+							<input type="number" id="years" value="1" min="1" />
+						</div>
+
+						<fieldset class="input-group compound-selector">
+							<legend>Compounding Period</legend>
+							<label>
+								<input type="radio" name="period" id="monthly" value="monthly" checked />
+								Monthly
+							</label>
+							<label>
+								<input type="radio" name="period" id="yearly" value="yearly" />
+								Yearly
+							</label>
+						</fieldset>
+					</div>
+                </section>
+                    <section class="result">
+                        <p>After <span class="num-years"></span> year<span class="plural">s</span>, you will have</p>
+                        <p id="final-amount"><span class="dollar-sign">$</span><span class="amount"></span></p>
+                        
+                        <button class="calculate-button">Calculate 🏦 </button>
+                        <div id="like_button_container">
+                        </div>
+                    </section>
+			</main>
+        </div>
+        <script src="js/index.js"></script>
+        <!-- Load React. -->
+        <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <!-- Load our React component. -->
+        <script src="js/like_button.js"></script>
+	</body>
+</html>

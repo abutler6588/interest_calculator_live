@@ -3,7 +3,7 @@
 
 Created simple interest calculator using ReactJS, JS, HTML, and CSS. 
 
-<img src="/images/InterestCalc.png">
+<img src="https://github.com/abutler6588/interest_calculator_live/blob/master/InterestCalc.png?raw=true">
 
 ## Learning Recap 
 
